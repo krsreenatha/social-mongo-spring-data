@@ -5,16 +5,25 @@ package org.simple.farm.model.embedded;
  */
 public class Building {
 
-    private Location location;
+    private Location inFarmLocation;
     private int level;
     private BuildingType type;
 
-    public Location getLocation() {
-        return location;
+    public Building() {
     }
 
-    public void setLocation(Location location) {
-        this.location = location;
+    public Building(Location inFarmLocation, int level, BuildingType type) {
+        this.inFarmLocation = inFarmLocation;
+        this.level = level;
+        this.type = type;
+    }
+
+    public Location getInFarmLocation() {
+        return inFarmLocation;
+    }
+
+    public void setInFarmLocation(Location inFarmLocation) {
+        this.inFarmLocation = inFarmLocation;
     }
 
     public int getLevel() {
@@ -36,7 +45,7 @@ public class Building {
     @Override
     public String toString() {
         return "Building{" +
-                "location=" + location +
+                "inFarmLocation=" + inFarmLocation +
                 ", level=" + level +
                 ", type=" + type +
                 '}';

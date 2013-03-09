@@ -3,6 +3,7 @@ package org.simple.farm.model;
 import org.bson.types.ObjectId;
 import org.simple.farm.model.embedded.Achievement;
 import org.simple.farm.model.embedded.UserFarm;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.Date;
 import java.util.List;
@@ -10,6 +11,7 @@ import java.util.List;
 /**
  * @author ilya40umov
  */
+@Document
 public class UserModel {
 
     private ObjectId id;
@@ -20,6 +22,20 @@ public class UserModel {
     private List<Achievement> achievements;
     private long experience;
     private UserFarm farm;
+
+    public UserModel() {
+    }
+
+    public UserModel(String login, String password, Date registered, Date lastVisit,
+                     List<Achievement> achievements, long experience, UserFarm farm) {
+        this.login = login;
+        this.password = password;
+        this.registered = registered;
+        this.lastVisit = lastVisit;
+        this.achievements = achievements;
+        this.experience = experience;
+        this.farm = farm;
+    }
 
     public ObjectId getId() {
         return id;

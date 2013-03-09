@@ -9,6 +9,20 @@ public class CropsBuilding extends Building {
 
     private Date lastHarvest;
 
+    public CropsBuilding() {
+        setType(BuildingType.CROPS);
+    }
+
+    public CropsBuilding(Date lastHarvest) {
+        this.lastHarvest = lastHarvest;
+        setType(BuildingType.CROPS);
+    }
+
+    public CropsBuilding(Location inFarmLocation, int level, Date lastHarvest) {
+        super(inFarmLocation, level, BuildingType.CROPS);
+        this.lastHarvest = lastHarvest;
+    }
+
     public Date getLastHarvest() {
         return lastHarvest;
     }
