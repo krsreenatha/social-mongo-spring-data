@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="119.5" y="82.0">org.simple.farm.model.embedded.Building</node>
+    <node x="47.5" y="0.0">org.simple.farm.model.embedded.Location</node>
+    <node x="0.0" y="164.0">org.simple.farm.model.embedded.UserFarm</node>
+    <node x="275.0" y="164.0">org.simple.farm.model.embedded.Achievement</node>
+    <node x="140.0" y="246.0">org.simple.farm.model.UserModel</node>
+    <node x="122.0" y="164.0">org.simple.farm.model.embedded.CropsBuilding</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.simple.farm.model.embedded.UserFarm" target="org.simple.farm.model.embedded.Location">
+      <point x="-25.5" y="-16.0" />
+      <point x="25.5" y="57.0" />
+      <point x="71.5" y="57.0" />
+      <point x="-24.0" y="16.0" />
+    </edge>
+    <edge source="org.simple.farm.model.UserModel" target="org.simple.farm.model.embedded.Achievement">
+      <point x="27.75" y="-16.0" />
+      <point x="223.25" y="221.0" />
+      <point x="340.0" y="221.0" />
+      <point x="0.0" y="16.0" />
+    </edge>
+    <edge source="org.simple.farm.model.embedded.UserFarm" target="org.simple.farm.model.embedded.Building">
+      <point x="25.5" y="-16.0" />
+      <point x="76.5" y="139.0" />
+      <point x="142.5" y="139.0" />
+      <point x="-23.0" y="16.0" />
+    </edge>
+    <edge source="org.simple.farm.model.UserModel" target="org.simple.farm.model.embedded.UserFarm">
+      <point x="-27.75" y="-16.0" />
+      <point x="167.75" y="221.0" />
+      <point x="51.0" y="221.0" />
+      <point x="0.0" y="16.0" />
+    </edge>
+    <edge source="org.simple.farm.model.embedded.CropsBuilding" target="org.simple.farm.model.embedded.Building">
+      <point x="0.0" y="-16.0" />
+      <point x="23.0" y="16.0" />
+    </edge>
+    <edge source="org.simple.farm.model.embedded.Building" target="org.simple.farm.model.embedded.Location">
+      <point x="0.0" y="-16.0" />
+      <point x="165.5" y="57.0" />
+      <point x="119.5" y="57.0" />
+      <point x="24.0" y="16.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="202.5" y="139.0" />
+  <SelectedNodes>
+    <node>org.simple.farm.model.embedded.CropsBuilding</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

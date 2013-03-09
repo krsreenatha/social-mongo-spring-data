@@ -8,6 +8,14 @@ public class Achievement {
     private AchievementType type;
     private int level;
 
+    public Achievement() {
+    }
+
+    public Achievement(AchievementType type, int level) {
+        this.type = type;
+        this.level = level;
+    }
+
     public AchievementType getType() {
         return type;
     }

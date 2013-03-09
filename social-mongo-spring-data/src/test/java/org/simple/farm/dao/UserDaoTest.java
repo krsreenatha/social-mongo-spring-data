@@ -4,6 +4,7 @@ import org.simple.farm.builder.UserFarmBuilder;
 import org.simple.farm.builder.UserModelBuilder;
 import org.simple.farm.config.SimpleFarmConfiguration;
 import org.simple.farm.model.UserModel;
+import org.simple.farm.model.embedded.Achievement;
 import org.simple.farm.model.embedded.Building;
 import org.simple.farm.model.embedded.UserFarm;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,14 +34,15 @@ public class UserDaoTest extends AbstractTestNGSpringContextTests {
 
         final String username = "testUserName";
         UserFarm userFarm = UserFarmBuilder.createFarmBuilder("Test Farm", 15, 15).
-                setResources(100, 100, 100).addCropsBuilding(1, 0, 0, new Date()).
+                setResources(90, 130, 150).addCropsBuilding(1, 0, 0, new Date()).
                 addSimpleBuilding(Building.BuildingType.SCARE_CROW, 1, 1, 1).build();
         userDao.save(UserModelBuilder.createUserBuilder(username, "a password", new Date())
-                .setFarm(userFarm).build());
+                .setFarm(userFarm).setExperience(0).addAchievement(Achievement.AchievementType.BUILDER, 1)
+                .build());
 
         UserModel user = userDao.findByLogin(username);
         assertNotNull(user);
         assertNotNull(user.getFarm());
-        assertEquals(user.getFarm().getFood(), 100);
+        assertEquals(user.getFarm().getFood(), 90);
     }
 }
